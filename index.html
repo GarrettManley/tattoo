@@ -23,7 +23,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	
+	<!-- Recaptcha script -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -39,14 +41,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">InkHub</a>
+                <a class="navbar-brand" style="padding: 0px 0px" href="#">
+					<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="img/logoSmall.png" >
+				</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar">
+                <ul class="nav navbar-nav navbar" style="margin-bottom:3px;">
                     <li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
-					  <ul class="dropdown-menu">
+					  <ul class="dropdown-menu" style="padding:17px;border-top-width: 1px;margin-top: 3px;">
 						<li class="dropdown-header">Categories</li>
 						<li><a href="#">Abstract</a></li>
 						<li><a href="#">Animals</a></li>
@@ -65,13 +69,32 @@
 					</li>
                     
                 </ul>
+				
+				<!-- Upload Button -->
+				<button type="button" class="btn btn-info navbar-btn" style="margin-left: 5px;"> <span class="glyphicon glyphicon glyphicon-cloud" aria-hidden="true"></span> Upload your tattoo!</button>
+				
 				<ul class="nav navbar-nav navbar-right">
+					<!-- Sign in button -->
 					<li>
-                        <a href="#">Sign In</a>
+                        <li class="dropdown" id="menuLogin">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+						<div class="dropdown-menu" style="padding:17px;border-radius: 10px;box-shadow: 2px 2px 6px black;margin-top: 3px;">
+						  <form class="form" id="formLogin"> 
+							<input name="username" id="username" type="text" style="border-radius: 4px;" placeholder=" Username"> 
+							<input name="password" id="password" type="password" style="margin-top: 3px; border-radius: 4px;" placeholder=" Password"><br>
+							<button type="button" id="btnLogin" class="btn" style="color: black;margin-top: 5px;">Login</button>
+						  </form>
+						</div>
+					  </li>
                     </li>
+					
+					<!-- Register Button -->
                     <li>
-                        <a href="#">Register</a>
+                        <a href="#" data-toggle="modal" data-target="#registerModal" >Register</a>
                     </li>
+					
+					
+					
 					<li>
 						<form class="navbar-form" role="search">
 							<div class="input-group">
@@ -88,17 +111,52 @@
         </div>
         <!-- /.container -->
     </nav>
+	
+	<!-- Registration Modal -->
+	
+					<!-- Modal -->
+					<div id="registerModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Register for InkHub!</h4>
+						  </div>
+						  <!--Modal Body -->
+						  <div class="modal-body">
+							<form>
+							  <div class="form-group">
+								<label for="exampleInputEmail1">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							  </div>
+							  <div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							  </div>
+							  <div class="g-recaptcha" data-sitekey="6Lcdxg8TAAAAAIo0NUYcEt5jnEBX40QgGUgI5gIP"></div>
+							  <button type="submit" class="btn btn-default">Submit</button>
+							</form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+
+					  </div>
+					</div>
 
     <!-- Page Content -->
     <div class="container">
-
+		
+		<!-- Thumbnails -->
         <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">Popular Tattoos (Placeholder)</h1>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h2>Popular Tattoos</h2></div>
+			  <div class="panel-body">
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="img/tattoo_1.jpg" alt="">
                 </a>
@@ -158,6 +216,32 @@
                     <img class="img-responsive" src="img/tattoo_12.jpg" alt="">
                 </a>
             </div>
+			</div>
+			  
+			  <!-- Page Navigation -->
+			  <nav>
+				  <ul class="pagination">
+					<li>
+					  <a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					  </a>
+					</li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+					  <a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					  </a>
+					</li>
+				  </ul>
+			</nav>
+			
+			</div>
+			
+			
         </div>
 
         <hr>
