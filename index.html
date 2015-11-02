@@ -23,13 +23,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	
+	<!-- Recaptcha script -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -39,20 +41,54 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">InkHub</a>
+                <a class="navbar-brand" style="padding: 0px 0px" href="#">
+					<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="img/logoSmall.png" >
+				</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">Categories</a>
+                <ul class="nav navbar-nav navbar" style="margin-bottom:3px;">
+                    <li class="dropdown">
+					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
+					  <ul class="dropdown-menu" style="padding:17px;border-top-width: 1px;margin-top: 3px;">
+						<li class="dropdown-header">Categories</li>
+						<li><a href="#">Abstract</a></li>
+						<li><a href="#">Animals</a></li>
+						<li><a href="#">Fantasy</a></li>
+						<li><a href="#">Nature</a></li>
+						<li><a href="#">Realistic</a></li>
+						<li><a href="#">Tribal</a></li>
+						<li role="separator" class="divider"></li>
+						<li class="dropdown-header">Location</li>
+						<li><a href="#">Head</a></li>
+						<li><a href="#">Chest</a></li>
+						<li><a href="#">Back</a></li>
+						<li><a href="#">Arms</a></li>
+						<li><a href="#">Legs</a></li>
+					  </ul>
+					</li>
+                    
+                </ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+                        <li class="dropdown" id="menuLogin">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+						<div class="dropdown-menu" style="padding:17px;border-radius: 10px;box-shadow: 2px 2px 6px black;margin-top: 3px;">
+						  <form class="form" id="formLogin"> 
+							<input name="username" id="username" type="text" style="border-radius: 4px;" placeholder=" Username"> 
+							<input name="password" id="password" type="password" style="margin-top: 3px; border-radius: 4px;" placeholder=" Password"><br>
+							<button type="button" id="btnLogin" class="btn" style="color: black;margin-top: 5px;">Login</button>
+						  </form>
+						</div>
+					  </li>
                     </li>
+					<!-- Register Button -->
                     <li>
-                        <a href="#">Login</a>
+                        <a href="#" data-toggle="modal" data-target="#registerModal" >Register</a>
                     </li>
-                    <li>
-                        <a href="#">Create Account</a>
-                    </li>
+					
+					
+					
 					<li>
 						<form class="navbar-form" role="search">
 							<div class="input-group">
@@ -63,23 +99,58 @@
 							</div>
 						</form>
 					</li>
-                </ul>
+				</ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+	
+	<!-- Registration Modal -->
+	
+					<!-- Modal -->
+					<div id="registerModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Register for InkHub!</h4>
+						  </div>
+						  <!--Modal Body -->
+						  <div class="modal-body">
+							<form>
+							  <div class="form-group">
+								<label for="exampleInputEmail1">Email address</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+							  </div>
+							  <div class="form-group">
+								<label for="exampleInputPassword1">Password</label>
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							  </div>
+							  <div class="g-recaptcha" data-sitekey="6Lcdxg8TAAAAAIo0NUYcEt5jnEBX40QgGUgI5gIP"></div>
+							  <button type="submit" class="btn btn-default">Submit</button>
+							</form>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  </div>
+						</div>
+
+					  </div>
+					</div>
 
     <!-- Page Content -->
     <div class="container">
-
+		
+		<!-- Thumbnails -->
         <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">Popular Tattoos (Placeholder)</h1>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h2>Popular Tattoos</h2></div>
+			  <div class="panel-body">
+				<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="img/tattoo_1.jpg" alt="">
                 </a>
@@ -139,6 +210,32 @@
                     <img class="img-responsive" src="img/tattoo_12.jpg" alt="">
                 </a>
             </div>
+			</div>
+			  
+			  <!-- Page Navigation -->
+			  <nav>
+				  <ul class="pagination">
+					<li>
+					  <a href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+					  </a>
+					</li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li>
+					  <a href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+					  </a>
+					</li>
+				  </ul>
+			</nav>
+			
+			</div>
+			
+			
         </div>
 
         <hr>
@@ -147,7 +244,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Project for Dr. Wen-Ran Zhang's Distributed Web Systems Design class.</p>
+                    <p><small>Project for Dr. Wen-Ran Zhang's Distributed Web Systems Design class.</small></p>
                 </div>
             </div>
         </footer>
@@ -156,7 +253,7 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
