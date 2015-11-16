@@ -45,12 +45,11 @@
 				<li>
 					<li class="dropdown" id="menuLogin">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
-					<div class="dropdown-menu" style="padding:17px;border-radius: 10px;box-shadow: 2px 2px 6px black;margin-top: 3px;">
-					  <form class="form" id="formLogin"> 
-						<input name="username" id="username" type="text" style="border-radius: 4px;" placeholder=" Username"> 
-						<input name="password" id="password" type="password" style="margin-top: 3px; border-radius: 4px;" placeholder=" Password"><br>
-						<button type="button" id="btnLogin" class="btn" style="color: black;margin-top: 5px;">Login</button>
-					  </form>
+					<div class="dropdown-menu">
+						<?php
+							$path = $_SERVER['DOCUMENT_ROOT']."/include/login.php";
+							include_once($path);
+						?>
 					</div>
 				  </li>
 				</li>
