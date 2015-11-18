@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" style="padding: 0px 0px" href="#">
+			<a class="navbar-brand" style="padding: 0px 0px" href="/">
 				<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="img/logoSmall.png" >
 			</a>
 		</div>
@@ -42,18 +42,10 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<!-- Sign in button -->
-				<li>
-					<li class="dropdown" id="menuLogin">
-					<a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
-					<div class="dropdown-menu">
-						<?php
-							$path = $_SERVER['DOCUMENT_ROOT']."/include/login.php";
-							include_once($path);
-						?>
-					</div>
-				  </li>
-				</li>
-
+				<?php
+					$path = $_SERVER['DOCUMENT_ROOT']."/include/login.php";
+					include_once($path);
+				?>
 				<!-- Register Button -->
 				<li>
 					<a href="#" data-toggle="modal" data-target="#registerModal" >Register</a>

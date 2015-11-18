@@ -1,5 +1,8 @@
-<?php 
-		//check for submit
+<?php
+	function displayLogin ($msg, $username){
+		echo $msg;
+	}
+	//check for submit
 	if(isset($_POST['submit'])){
 		//check if username and password strings are empty
 		if(!empty($_POST['username'])&&!empty($_POST['password'])) {
@@ -46,15 +49,10 @@
 				$_SESSION['dbPass'] = $userResult[0]['password'];	
 				
 				//check password hashes
-				if(password_verify($_SESSION['pass'],$_SESSION['dbPass'])) {
-					//check to see if password needs to be rehashed under new algorithms
-					if(password_needs_rehash($_SESSION['dbPass'], PASSWORD_DEFAULT)) {
-						//if it needs re-hashing, rehash and login
-						$newHash = password_hash($_SESSION['dbPass'], PASSWORD_DEFAULT);
-						$stmt = $db->prepare('UPDATE users SET password = :new_pass WHERE username = :username');
-						$stmt->bindParam(':new_pass', $newHash);
-						$stmt->bindParam(':username', $_SESSION['user']);
-						$stmt->execute();
+				if($_SESSION['pass'] == $_SESSION['dbPass']) {
+					header('location: /index.html');
+					die();
+					
 					}
 				//redisplay if password not found
 				} else {
@@ -76,11 +74,4 @@
 			$username = "";
 			displayLogin($msg,$username);
 		}
-		
-	//if page is fresh, load form
-	} else {
-		$msg="";
-		$username="";
-		displayLogin($msg,$username);
-	}
 ?>
