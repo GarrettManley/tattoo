@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -9,7 +13,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand" style="padding: 0px 0px" href="/">
-				<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="img/logoSmall.png" >
+				<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="/img/logoSmall.png" >
 			</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,7 +52,7 @@
 				?>
 				<!-- Register Button -->
 				<li>
-					<a href="#" data-toggle="modal" data-target="#registerModal" >Register</a>
+					<a href="#" data-toggle="modal" data-target="#registerModal">Register</a>
 				</li>
 
 

@@ -6,7 +6,7 @@
 	function pdo_open_admin() {
 		global $db;
 		//define database informaiton
-		$dsn = 'mysql:dbname=tattoo;host=localhost;';
+		$dsn = 'mysql:dbname=inkhub;host=localhost;';
 		//database username, this will need to be changed
 		//$username = 'garrett_inkAdmin';
 		$username = 'root';

@@ -18,5 +18,8 @@ footer {
 }
 
 .dropdown-menu {
-	padding 50px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 6px black;
+	margin-top: 3px;
 }
