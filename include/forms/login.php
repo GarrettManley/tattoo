@@ -2,6 +2,26 @@
 	function displayLogin ($msg, $username){
 		echo $msg;
 	}
+	
+	function pdo_open_admin() {
+		global $db;
+		//define database informaiton
+		$dsn = 'mysql:dbname=tattoo;host=localhost;';
+		//database username, this will need to be changed
+		//$username = 'garrett_inkAdmin';
+		$username = 'root';
+		//database password, this will need to be changed
+		//$password = 'inkhubpassword';
+		$password = '';
+
+		//attempt to open connection, if connection is not available then give an error
+		try {
+			$db = new PDO($dsn, $username, $password);
+			echo "Connection Established";
+		} catch(PDOException $e) {
+			echo "Could not establish database connection.";
+		}
+	}
 	//check for submit
 	if(isset($_POST['submit'])){
 		//check if username and password strings are empty
@@ -33,7 +53,7 @@
 			//call database entry
 			global $db;
 			
-			//start read-only session
+			//start session
 			pdo_open_admin();
 			
 			//look for username in form, limit ONE result for security
@@ -48,14 +68,17 @@
 				$_SESSION['dbUser'] = strtolower($userResult[0]['username']);
 				$_SESSION['dbPass'] = $userResult[0]['password'];	
 				
-				//check password hashes
+				//check password entered matches the password from the datebase for that user
 				if($_SESSION['pass'] == $_SESSION['dbPass']) {
-					header('location: /index.html');
+					$msg = "<h3 class='text-center'>Login Successful</h3>";
+					displayLogin($msg,$username);
+					//header('location: /index.php');
+					echo "Success";
 					die();
 					
 					}
 				//redisplay if password not found
-				} else {
+				 else {
 					$msg = "<h3 class='text-center'>Password not found</h3>";
 					$username = $_SESSION['user'];
 					displayLogin($msg,$username);
@@ -74,4 +97,5 @@
 			$username = "";
 			displayLogin($msg,$username);
 		}
+	}
 ?>
