@@ -57,6 +57,9 @@
 									<a class='dropdown-toggle' href='#' data-toggle='dropdown' id='navLogin'>
 										Welcome ".$_SESSION['user']."!
 									</a>
+									<div class='dropdown-menu'>
+										<a href='/include/logout.php'>Logout</a>
+									</div>
 								</li>
 							</li>
 						";

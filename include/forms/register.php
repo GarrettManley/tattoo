@@ -1,8 +1,8 @@
 <?php
 
-	session_start();
+	print_r($_POST);
+	echo "<br>".$_POST['username']."<br>";
 
-	echo ($_SESSION['user']);
 
 	function pdo_open_admin() {
 		global $db;
