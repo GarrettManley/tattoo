@@ -20,23 +20,23 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar" style="margin-bottom:3px;">
 				<li class="dropdown">
-				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
-				  <ul class="dropdown-menu" style="padding:17px;border-top-width: 1px;margin-top: 3px;">
-					<li class="dropdown-header">Categories</li>
-					<li><a href="#">Abstract</a></li>
-					<li><a href="#">Animals</a></li>
-					<li><a href="#">Fantasy</a></li>
-					<li><a href="#">Nature</a></li>
-					<li><a href="#">Realistic</a></li>
-					<li><a href="#">Tribal</a></li>
-					<li role="separator" class="divider"></li>
-					<li class="dropdown-header">Location</li>
-					<li><a href="#">Head</a></li>
-					<li><a href="#">Chest</a></li>
-					<li><a href="#">Back</a></li>
-					<li><a href="#">Arms</a></li>
-					<li><a href="#">Legs</a></li>
-				  </ul>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Browse<span class="caret"></span></a>
+						<ul class="dropdown-menu" style="padding:17px;border-top-width: 1px;margin-top: 3px;">
+							<li class="dropdown-header">Categories</li>
+							<li><a href="#">Abstract</a></li>
+							<li><a href="#">Animals</a></li>
+							<li><a href="#">Fantasy</a></li>
+							<li><a href="#">Nature</a></li>
+							<li><a href="#">Realistic</a></li>
+							<li><a href="#">Tribal</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Location</li>
+							<li><a href="#">Head</a></li>
+							<li><a href="#">Chest</a></li>
+							<li><a href="#">Back</a></li>
+							<li><a href="#">Arms</a></li>
+							<li><a href="#">Legs</a></li>
+						</ul>
 				</li>
 
 			</ul>
@@ -88,3 +88,11 @@
 	</div>
 	<!-- /.container -->
 </nav>
+
+<!-- Registration Modal -->
+<?php
+	$path = $_SERVER['DOCUMENT_ROOT']."/include/register.php";
+	include_once($path);
+	$path = $_SERVER['DOCUMENT_ROOT']."/include/upload.php";
+	include_once($path);
+?>
