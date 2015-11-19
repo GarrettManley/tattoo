@@ -45,10 +45,22 @@
 			<button type="button" class="btn btn-info navbar-btn" style="margin-left: 5px;" data-toggle="modal" data-target="#uploadModal"> <span class="glyphicon glyphicon glyphicon-cloud" aria-hidden="true"></span> Upload your tattoo!</button>
 
 			<ul class="nav navbar-nav navbar-right">
-				<!-- Sign in button -->
+				<!-- Displays login information if the user is not logged in -->
 				<?php
-					$path = $_SERVER['DOCUMENT_ROOT']."/include/login.php";
-					include_once($path);
+					if(!isset($_SESSION['user'])){
+						$path = $_SERVER['DOCUMENT_ROOT']."/include/login.php";
+						include_once($path);
+					} else {
+						echo "
+							<li>
+								<li class='dropdown'>
+									<a class='dropdown-toggle' href='#' data-toggle='dropdown' id='navLogin'>
+										Welcome ".$_SESSION['user']."!
+									</a>
+								</li>
+							</li>
+						";
+					}
 				?>
 				<!-- Register Button -->
 				<li>

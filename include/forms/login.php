@@ -1,4 +1,7 @@
 <?php
+
+	session_start();
+
 	function displayLogin ($msg, $username){
 		echo $msg;
 	}
@@ -72,7 +75,7 @@
 				if($_SESSION['pass'] == $_SESSION['dbPass']) {
 					$msg = "<h3 class='text-center'>Login Successful</h3>";
 					displayLogin($msg,$username);
-					//header('location: /index.php');
+					header('location: /index.php');
 					echo "Success";
 					die();
 					

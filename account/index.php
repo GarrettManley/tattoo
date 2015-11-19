@@ -30,7 +30,6 @@
 		include_once($path);
 	?>
 	
-	
 	<!-- Registration Modal -->
 	<?php
 		$path = $_SERVER['DOCUMENT_ROOT']."/include/register.php";
@@ -42,12 +41,14 @@
 	<div class="container panel" style="width:90%;">
 	
 		<div class="page-header">
-            <h1>User Page</h1>
+			<?php
+				echo "<h1>".$_SESSION['user']."'s Account</h1>";
+			?>
         </div>
 	
 	    <div class="row panel">
 			<div class="col-sm-4">
-				<img class="img-responsive" src="img/hqdefault.jpg" alt="">
+				<img class="img-responsive" src="/img/hqdefault.jpg" alt="">
 			</div>
 			
 			<div class="col-sm-16">	
@@ -68,37 +69,37 @@
 				
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="img/tattoo_5.jpg" alt="">
+                    <img class="img-responsive" src="/img/tattoo_5.jpg" alt="">
                 </a>
 			</div>
 			
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                <img class="img-responsive" src="img/tattoo_4.jpg" alt="">
+                <img class="img-responsive" src="/img/tattoo_4.jpg" alt="">
                 </a>
 			</div>
 			
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                <img class="img-responsive" src="img/tattoo_11.jpg" alt="">
+                <img class="img-responsive" src="/img/tattoo_11.jpg" alt="">
                 </a>
 			</div>
 			
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                <img class="img-responsive" src="img/tattoo_11.jpg" alt="">
+                <img class="img-responsive" src="/img/tattoo_11.jpg" alt="">
                 </a>
 			</div>
 			
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                <img class="img-responsive" src="img/tattoo_11.jpg" alt="">
+                <img class="img-responsive" src="/img/tattoo_11.jpg" alt="">
                 </a>
 			</div>
 			
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                <img class="img-responsive" src="img/tattoo_11.jpg" alt="">
+                <img class="img-responsive" src="/img/tattoo_11.jpg" alt="">
                 </a>
 			</div>
 			
@@ -115,7 +116,6 @@
             </div>
         </footer>
 
-    </div>
     <!-- /.container -->
 
     <!-- jQuery -->
