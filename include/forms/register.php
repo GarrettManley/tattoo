@@ -1,8 +1,8 @@
 <?php
 
-	print_r($_POST);
-	echo "<br>".$_POST['username']."<br>";
+	session_start();
 
+	
 
 	function pdo_open_admin() {
 		global $db;
@@ -67,6 +67,12 @@
 			//redisplay the form with a message that the data entry is valid.
 			echo "<h4 class='text-center'>Added user successfully<h4>";
 			//addUserForm($e);
+			
+			//log user into newly registered account
+			$_SESSION['user']=strtolower(strip_tags($_POST['username']));
+			$_SESSION['pass']=strip_tags($_POST['password']);
+			
+			header("Location: /index.php");
 		}
 	}
 
