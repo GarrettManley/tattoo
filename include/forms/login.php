@@ -83,8 +83,8 @@
 				//redisplay if password not found
 				 else {
 					$msg = "<h3 class='text-center'>Password not found</h3>";
-					$username = $_SESSION['user'];
-					displayLogin($msg,$username);
+					 session_destroy();
+					 displayLogin($msg,$username);
 				}
 				
 			//redisplay if user does not exist

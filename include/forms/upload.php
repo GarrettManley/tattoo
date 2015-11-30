@@ -104,7 +104,7 @@
 							  	':title'=>$title,
 								':description'=>$description));
 			//redisplay the form with a message that the data entry is valid.
-			echo "<h4 class='text-center'>Added tattoo successfully<h4>";
+			header("Location: /index.php");
 	}
 		
 ?>

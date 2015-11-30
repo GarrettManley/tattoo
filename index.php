@@ -51,287 +51,31 @@
 
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="">
 		
 				  <!-- Wrapper for slides -->
-		  <div class="carousel-inner" role="listbox">
+		<div class="carousel-inner" role="listbox">
 				
-				<!-- Slide 1 -->
-				<div class="item active">
-				  
-				  <div class="row">
-					
+			<?php
+				$path = $_SERVER['DOCUMENT_ROOT']."/include/indexSlide.php";
+				include_once($path);
+			?>
 
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_1.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_2.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_3.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_4.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_5.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_6.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_7.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_8.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_9.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_10.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_11.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_12.jpg" alt="">
-							</a>
-						</div>
-					</div>
+			<?php
+				$path = $_SERVER['DOCUMENT_ROOT']."/include/indexSlide.php";
+				include_once($path);
+			?>
 
-					
-				</div>
-				
-				<!-- slide 2 -->
-				<div class="item">
-				  				  
-				  <div class="row">
-					
+			<?php
+				$path = $_SERVER['DOCUMENT_ROOT']."/include/indexSlide.php";
+				include_once($path);
+			?>
 
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_1.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_2.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_3.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_4.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_5.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_6.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_7.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_8.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_9.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_10.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_11.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_12.jpg" alt="">
-							</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- slide 3 -->
-				<div class="item">
-				  				  <div class="row">
-					
-
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_1.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_2.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_3.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_4.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_5.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_6.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_7.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_8.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_9.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_10.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_11.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_12.jpg" alt="">
-							</a>
-						</div>
-					</div>
-				</div>
-				
-				<!-- slide 4 -->
-				<div class="item">
-				  				  <div class="row">
-					
-
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_1.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_2.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_3.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_4.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_5.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_6.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_7.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_8.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_9.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_10.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_11.jpg" alt="">
-							</a>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-							<a class="thumbnail" href="#">
-								<img class="img-responsive" src="img/tattoo_12.jpg" alt="">
-							</a>
-						</div>
-					</div>
-				</div>
-			
+			<?php
+				$path = $_SERVER['DOCUMENT_ROOT']."/include/indexSlide.php";
+				include_once($path);
+			?>
+			  
 			</div>
 			
 			<!-- Left and right controls -->
