@@ -15,7 +15,7 @@
 				<!--Modal Body -->
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-						<form class='form-horizontal' role='form' method='post' action='/include/forms/register.php'>
+						<form class='form-horizontal' role='form' method='post' action='/inkhub/include/forms/register.php'>
 							<div class="modal-body">
 								<div class="form-group">
 									<label for="username">Username</label>

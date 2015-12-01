@@ -1,26 +1,24 @@
 <?php
-	
+	session_start();
 	function pdo_open_admin() {
 		global $db;
 		//define database informaiton
-		$dsn = 'mysql:dbname=inkhub;host=localhost;';
+		$dsn = 'mysql:dbname=garrett_inkhub;host=localhost;';
 		//database username, this will need to be changed
-		//$username = 'garrett_inkAdmin';
-		$username = 'root';
+		$username = 'garrett_inkAdmin';
+		//$username = 'root';
 		//database password, this will need to be changed
-		//$password = 'inkhubpassword';
-		$password = '';
+		$password = 'inkhubpassword';
+		//$password = '';
 
 		//attempt to open connection, if connection is not available then give an error
 		try {
 			$db = new PDO($dsn, $username, $password);
-			echo "Connection Established";
+			//echo "Connection Established";
 		} catch(PDOException $e) {
-			echo "Could not establish database connection.";
+			//echo "Could not establish database connection.";
 		}
 	}
-
-	session_start();
 
 	//call database entry
 	global $db;
@@ -44,7 +42,7 @@
 		 
 
 		//set directory for image upload
-		$target_dir = $_SERVER['DOCUMENT_ROOT']."/img/tattoos/";
+		$target_dir = $_SERVER['DOCUMENT_ROOT']."/inkhub/img/tattoos/";
 		
 		echo ($_FILES["tattoo_img"]["name"]);
 
@@ -56,7 +54,7 @@
 			//real location
 			$target_file = $target_dir . $filename;
 			//create relative image path
-			$relImgPath = "/img/tattoos/" . $filename;
+			$relImgPath = "/inkhub/img/tattoos/" . $filename;
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 			// Check if image file is an actual image or fake image
@@ -104,7 +102,7 @@
 							  	':title'=>$title,
 								':description'=>$description));
 			//redisplay the form with a message that the data entry is valid.
-			header("Location: /index.php");
+			header("Location: /inkhub/index.php");
 	}
 		
 ?>

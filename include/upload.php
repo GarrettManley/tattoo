@@ -15,7 +15,7 @@
 				<!--Modal Body -->
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1">
-						<form class='form-horizontal' role='form' method='post' action='/include/forms/upload.php' enctype='multipart/form-data'>
+						<form class='form-horizontal' role='form' method='post' action='/inkhub/include/forms/upload.php' enctype='multipart/form-data'>
 							<div class="modal-body">
 								<!-- Title -->
 								<div class="form-group">

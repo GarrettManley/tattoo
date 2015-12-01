@@ -12,8 +12,8 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" style="padding: 0px 0px" href="/">
-				<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="/img/logoSmall.png" >
+			<a class="navbar-brand" style="padding: 0px 0px" href="/inkhub">
+				<img class="navbar-button"  style="margin-top: 7px; margin-right: 7px;" src="/inkhub/img/logoSmall.png" >
 			</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,7 +48,7 @@
 				<!-- Displays login information if the user is not logged in -->
 				<?php
 					if(!isset($_SESSION['user'])){
-						$path = $_SERVER['DOCUMENT_ROOT']."/include/login.php";
+						$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/login.php";
 						include_once($path);
 					} else {
 						echo "
@@ -58,7 +58,7 @@
 										Welcome ".$_SESSION['user']."!
 									</a>
 									<div class='dropdown-menu'>
-										<a href='/include/logout.php'>Logout</a>
+										<a href='/inkhub/include/logout.php'>Logout</a>
 									</div>
 								</li>
 							</li>
@@ -91,8 +91,8 @@
 
 <!-- Registration Modal -->
 <?php
-	$path = $_SERVER['DOCUMENT_ROOT']."/include/register.php";
+	$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/register.php";
 	include_once($path);
-	$path = $_SERVER['DOCUMENT_ROOT']."/include/upload.php";
+	$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/upload.php";
 	include_once($path);
 ?>

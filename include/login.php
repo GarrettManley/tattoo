@@ -2,7 +2,7 @@
 	<li class='dropdown' id='menuLogin'>
 		<a class='dropdown-toggle' href='#' data-toggle='dropdown' id='navLogin'>Login</a>
 		<div class='dropdown-menu'>
-			<form class='form-horizontal' role='form' method='post' action='/include/forms/login.php'>
+			<form class='form-horizontal' role='form' method='post' action='/inkhub/include/forms/login.php'>
 				<div class='row'>
 					<label for='username' class='control-label'>Username:</label>
 					<input type='text' class='form-control' id='username' name='username' placeholder='username' value=''>				
