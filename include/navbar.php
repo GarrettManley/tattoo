@@ -42,8 +42,13 @@
 			</ul>
 
 			<!-- Upload Button -->
-			<button type="button" class="btn btn-info navbar-btn" style="margin-left: 5px;" data-toggle="modal" data-target="#uploadModal"> <span class="glyphicon glyphicon glyphicon-cloud" aria-hidden="true"></span> Upload your tattoo!</button>
-
+			<?php
+				if(isset($_SESSION['user'])) {
+					echo "
+						<button type='button' class='btn btn-info navbar-btn' style='margin-left: 5px;' data-toggle='modal' data-target='#uploadModal'> <span class='glyphicon glyphicon glyphicon-cloud' aria-hidden='true'></span> Upload your tattoo!</button>
+					";
+				}
+			?>
 			<ul class="nav navbar-nav navbar-right">
 				<!-- Displays login information if the user is not logged in -->
 				<?php
@@ -66,10 +71,15 @@
 					}
 				?>
 				<!-- Register Button -->
-				<li>
-					<a href="#" data-toggle="modal" data-target="#registerModal">Register</a>
-				</li>
-
+				<?php
+					if(!isset($_SESSION['user'])){
+						echo "
+							<li>
+								<a href='#' data-toggle='modal' data-target='#registerModal'>Register</a>
+							</li>
+						";
+					}
+				?>
 
 
 				<li>
