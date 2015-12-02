@@ -55,7 +55,10 @@
 									<div class='col-md-10 col-md-offset-1'>
 										<h4>Comments</h4>
 										<hr>
-									</div>
+									</div>";
+		
+							if(isset($_SESSION['user'])){
+								echo "
 									<form class='form-horizontal' role='form' method='post' action='/inkhub/include/forms/comment.php'>
 										<div class='row'>
 											<div class='col-md-8 col-md-offset-2'>
@@ -70,15 +73,16 @@
 												<input id='addComment' name='addComment' type='submit' value='Comment' class='btn btn-primary'>
 											</div>
 										</div>
-									</form>
-								</div>";
+									</form>";
+							}
+							echo "</div>";
 								
 							foreach($commResults as $row) {
 								echo "
 									<div class='row'>
 										<div class='col-md-10 col-md-offset-1'>
 											<hr>
-											<h6>" . $row['commenter'] . " says:
+											<h4>" . $row['commenter'] . " says:</h4>
 											<p>" . $row['text'] . "</p>
 										</div>
 									</div>
