@@ -3,13 +3,14 @@
 	function pdo_open_admin() {
 		global $db;
 		//define database informaiton
-		$dsn = 'mysql:dbname=garrett_inkhub;host=localhost;';
+		//$dsn = 'mysql:dbname=garrett_inkhub;host=localhost;';
+		$dsn = 'mysql:dbname=inkhub;host=localhost;';
 		//database username, this will need to be changed
-		$username = 'garrett_inkAdmin';
-		//$username = 'root';
+		//$username = 'garrett_inkAdmin';
+		$username = 'root';
 		//database password, this will need to be changed
-		$password = 'inkhubpassword';
-		//$password = '';
+		//$password = 'inkhubpassword';
+		$password = '';
 
 		//attempt to open connection, if connection is not available then give an error
 		try {
@@ -49,37 +50,10 @@
 		
 		echo "
 			<div class='col-md-3 thumb'>
-				<a class='thumbnail' href='#' data-toggle='modal' data-target='" . $id . "'>
+				<a class='thumbnail' href='#' data-toggle='modal' data-target='#" . $id . "'>
 					<img class='img-responsive' src='" . $img_path . "' alt=''>
 				</a>
-			</div>
-			
-			
-			<!-- Modal -->
-<div id='" . $id . "' class='modal fade' role='dialog'>
-	<div class='modal-dialog'>
-		<div class='continer'>
-			<!-- Modal content-->
-			<div class='modal-content'>
-				<div class='row'>
-					<div class='col-md-10 col-md-offset-1'>
-						<div class='modal-header'>
-							<button type='button' class='close' data-dismiss='modal'>&times;</button>
-							<h4 class='modal-title'>" . $title . "</h4>
-						</div>
-					</div>
-				</div>
-				<!--Modal Body -->
-				<div class='row'>
-					<img class='img-responsive' src='" . $img_path . "' alt=''>
-					<p>" . $description . "</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-			
-			
+			</div>			
 		";
 		
 	}

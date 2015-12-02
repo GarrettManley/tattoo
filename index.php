@@ -60,21 +60,6 @@
 				$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/indexSlide.php";
 				include_once($path);
 			?>
-
-			<?php
-				$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/indexSlide.php";
-				include_once($path);
-			?>
-
-			<?php
-				$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/indexSlide.php";
-				include_once($path);
-			?>
-
-			<?php
-				$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/indexSlide.php";
-				include_once($path);
-			?>
 			  
 			</div>
 			
@@ -109,6 +94,11 @@
 
     </div>
     <!-- /.container -->
+	
+	<?php
+		$path = $_SERVER['DOCUMENT_ROOT']."/inkhub/include/imgModal.php";
+		include_once($path);
+	?>
 
     <!-- jQuery -->
     <script src="/inkhub/js/jquery-1.11.3.min.js"></script>
