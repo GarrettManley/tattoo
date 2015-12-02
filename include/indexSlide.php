@@ -51,7 +51,7 @@
 		echo "
 			<div class='col-md-3 thumb'>
 				<a class='thumbnail' href='#' data-toggle='modal' data-target='#" . $id . "'>
-					<img class='img-responsive' src='" . $img_path . "' alt=''>
+					<img class='img-responsive height-restrict' src='" . $img_path . "' alt=''>
 				</a>
 			</div>			
 		";

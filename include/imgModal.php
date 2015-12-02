@@ -42,6 +42,7 @@
 								<div class = 'modal-body'>
 									<div class='col-md-10 col-md-offset-1 text-center'>
 										<img class='img-responsive' src='" . $img_path . "' alt=''>
+										<h6>Posted By: " . $submitter . "</h6>
 										<hr>
 										<p>" . $description . "</p>
 									</div>
