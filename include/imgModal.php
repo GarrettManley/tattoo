@@ -19,6 +19,7 @@
 		$submitter = $row['added_by'];
 		$title = $row['title'];
 		$description = $row['description'];
+		$likes = $row['likes'];
 		
 		//get comments for that tattoo
 		$commStmt = $db->query('SELECT * FROM comments WHERE tattoo_id = ' . $id . '');
@@ -47,7 +48,17 @@
 										<img class='img-responsive' src='" . $img_path . "' alt=''>
 										<hr>
 										<h6>Posted By: " . $submitter . "</h6>
-										<hr>
+											<form class='form-horizontal' role='form' method='post' action='/inkhub/include/forms/like.php'>
+											<h4> $likes People like this.</h4>";
+											if(isset($_SESSION['user'])){
+											echo "	
+											<input type ='hidden' name='tattoo_id' value='" . $id . "'>
+											<input id='like' name='like' type='submit' value='Like This Tattoo' class='btn btn-default'>
+											</form>
+											";
+										}
+										echo "<hr>
+										<h4>Description</h4>
 										<p>" . $description . "</p>
 									</div>
 								</div>

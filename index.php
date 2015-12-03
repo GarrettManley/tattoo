@@ -37,7 +37,7 @@
 	?>
 					
 	<div class="panel panel-default" id="contentPanel">
-		<div class="panel-heading"><h2 class="text-center">Popular Tattoos</h2></div>
+		<div class="panel-heading"><h2 class="text-center">Tattoo Gallery</h2></div>
 		<div class="panel-body">
 			  
 		<div id="myCarousel" class="carousel slide">

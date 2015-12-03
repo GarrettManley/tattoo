@@ -48,6 +48,9 @@
 									<label for="tattoo_img">Tattoo</label>
 									<input type="file" name="tattoo_img" id="tattoo_img">
 								</div>
+								<div class="form-group">
+									<div class="g-recaptcha" data-sitekey="6Lcdxg8TAAAAAIo0NUYcEt5jnEBX40QgGUgI5gIP"></div>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<div class='row'>

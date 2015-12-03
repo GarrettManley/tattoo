@@ -29,6 +29,14 @@
 
 	if(isset($_POST['upload'])) {
 
+		if(isset($_POST['g-recaptcha-response']))
+        $captcha=$_POST['g-recaptcha-response'];
+		if(!$captcha){
+          	header( "refresh:3;url=/inkhub/index.php" );
+			echo '<h2>Please check the the captcha form.</h2>';
+        	exit;
+        }
+		
 		//initialize form variables
 		$title = $_POST['title'];
 		$description = $_POST['description'];
@@ -93,7 +101,7 @@
 			echo "Please enter an image to upload";
 		}
 
-		$stmt = "INSERT INTO tattoos (tattoo_id, added_by, location, nsfw, filepath, title, description) VALUES (:tattoo_id, :added_by, :location, :nsfw, :filepath, :title, :description)";
+		$stmt = "INSERT INTO tattoos (tattoo_id, added_by, location, nsfw, filepath, title, description,likes) VALUES (:tattoo_id, :added_by, :location, :nsfw, :filepath, :title, :description, 0)";
 			$q = $db->prepare($stmt);
 			$q->execute(array(	':tattoo_id'=>$tattoo_id,
 								':added_by'=>$_SESSION['user'],
